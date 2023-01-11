@@ -24,7 +24,15 @@ const SingleColor = ({ hex, index, rgb, weight }) => {
     >
       <p>{weight}%</p>
       <p>{hexValue}</p>
-      {alert && <p className="alert">copied to clipboard</p>}
+      <p
+        style={{
+          opacity: `${alert ? "1" : "0"}`,
+          fontSize: "0.85rem",
+          marginTop: "0.5rem",
+        }}
+      >
+        copied to clipboard
+      </p>
     </article>
   );
 };
